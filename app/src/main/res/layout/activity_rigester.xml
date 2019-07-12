@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".RegisterPage.RigesterActivity">
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/font1"
+        android:text="إنشـــــاء حســـاب جديــــد"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intro"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp">
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الإســــــم"
+            android:fontFamily="@font/font1" />
+        <EditText
+            android:id="@+id/edemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="البريد الإلكترونى"
+            android:fontFamily="@font/font1" />
+        <EditText
+            android:id="@+id/Phone_No"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:hint="رقم الهاتف"
+            android:fontFamily="@font/font1" />
+
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:hint="كلمة الســر"
+            android:fontFamily="@font/font1"/>
+        <EditText
+            android:id="@+id/edConPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:hint="تأكيد كلمة الســر"
+            android:fontFamily="@font/font1"/>
+
+    </androidx.cardview.widget.CardView>
+    <RadioGroup
+        android:id="@+id/RG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:checkedButton="@+id/Male"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ذكر"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/font1"/>
+        <RadioButton
+            android:id="@+id/Femal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أنثي"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/font1"/>
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/RGChose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RG"
+        android:checkedButton="@+id/Male"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/User"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أكيل"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/font1"/>
+        <RadioButton
+            android:id="@+id/Chief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="شيف"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/font1"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/loginbu"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RGChose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedgreenbutton"
+        android:text="تسجيـــل الدخــــول"
+        android:fontFamily="@font/font1"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:onClick="CreateAcc"/>
+
+    <TextView
+        android:id="@+id/CreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginbu"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/font1"
+        android:text="لديـــــك حســــاب بالفعـــل ؟"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:onClick="Login"/>
+
+    <ProgressBar
+        android:id="@+id/pBar"
+        android:layout_below="@+id/CreateAccount"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ProgressBar>
+</RelativeLayout>
